@@ -14,7 +14,7 @@ services:
     postgres:
         image: pgvector/pgvector:pg16
         volumes:
-            - db:/var/lib/postgres
+            - aimyme_db:/var/lib/postgres
         ports:
             - ${DB_FORWARD_PORT:-5432}:5432
         environment:
@@ -35,4 +35,4 @@ services:
             - ${MAILHOG_SMTP_PORT:-1025}:1025
             - ${MAILHOG_WEB_PORT:-8025}:8025
 volumes:
-    db:
+    aimyme_db:
