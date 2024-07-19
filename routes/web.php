@@ -9,3 +9,9 @@ Route::get('/', function () {
 Route::get('/sandbox', function () {
     return view('sandbox');
 });
+
+Route::group(['prefix' => 'storybook'], function () {
+    Route::get('/button', function () {
+        return view('storybook.button');
+    });
+});

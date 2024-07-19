@@ -1,4 +1,4 @@
-<x-user.layout>
+<x-app.storybook.layout>
   <main>
     <x-button variant='filled' icon="academic-cap">Primary</x-button>
     <x-button variant='filled' color='secondary'>Secondary</x-button>
@@ -18,5 +18,10 @@
     <x-button variant='text' href='/'>Primary Link</x-button>
     <x-button variant='text' color='secondary' href='/'>Secondary Link</x-button>
     <x-button variant='text' color='tertiary' href='/'>Tertiary Link</x-button>
+
+    <x-button variant='extended-fab' href='/'>Primary Link</x-button>
+    <x-button variant='extended-fab' color='secondary'>Secondary</x-button>
+    <x-button variant='extended-fab' color='tertiary'>Tertiary</x-button>
+    <x-button variant='extended-fab' color='tertiary' icon='academic-cap'>Tertiary</x-button>
   </main>
-</x-user.layout>
+</x-app.storybook.layout>
