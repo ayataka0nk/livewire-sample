@@ -6,31 +6,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/login', function () {
-    return view('login');
+Route::get('/login', [\App\Http\Controllers\AuthController::class, 'showLoginForm'])->name('show-login-form');
+Route::post('/login', [\App\Http\Controllers\AuthController::class, 'login'])->name('login');
+
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/dashboard', \App\Livewire\User\Dashboard::class)->name('dashboard');
 });
-
-Route::post('/authenticate', [\App\Http\Controllers\AuthController::class, 'authenticate'])->name('authenticate');
-
-Route::get('/dashboard', [\App\Http\Controllers\DashboardController::class, 'show'])->name('dashboard');
-
-
 
 
 
 Route::group(['prefix' => 'storybook'], function () {
-    Route::get('/app-bar', function () {
-        return view('storybook.app-bar');
-    });
-    Route::get('/button', function () {
-        return view('storybook.button');
-    });
-
-    Route::get('/card', function () {
-        return view('storybook.card');
-    });
-
-    Route::get('/text-field', function () {
-        return view('storybook.text-field');
-    });
+    Route::get('/app-bar', [\App\Http\Controllers\StorybookController::class, 'appBar']);
+    Route::get('/button', [\App\Http\Controllers\StorybookController::class, 'button']);
+    Route::get('/card', [\App\Http\Controllers\StorybookController::class, 'card']);
+    Route::get('/text-field', [\App\Http\Controllers\StorybookController::class, 'textField']);
 });

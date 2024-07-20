@@ -8,10 +8,13 @@ use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
-    /**
-     * 認証の試行を処理
-     */
-    public function authenticate(Request $request): RedirectResponse
+
+    public function showLoginForm()
+    {
+        return view('login');
+    }
+
+    public function login(Request $request): RedirectResponse
     {
         $credentials = $request->validate([
             'email' => ['required', 'email'],

@@ -3,5 +3,9 @@
     'icon' => 'pencil',
     'href' => '/storybook/app-bar',
 ]">
-  <h1>DashBoard</h1>
+  <div>
+    <x-app-bar.top class="md:hidden">Title</x-app-bar.top>
+    <h1>DashBoard</h1>
+    <div>{{ $user->name }}</div>
+  </div>
 </x-app.user.layout>

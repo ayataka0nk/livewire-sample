@@ -14,13 +14,17 @@
       ['label' => 'TimePicker', 'icon' => 'rectangle-group', 'href' => '/storybook/time-picker'],
       ['label' => 'DoublePane', 'icon' => 'rectangle-group', 'href' => '/storybook/double-pane'],
   ];
+  $appName = 'StoryBook';
 
 @endphp
 
 
 <x-root>
   <div class="flex">
-    <x-navigation.template appName="StoryBook" :items="$items" :action="$action" />
-    <div class="flex-1">{{ $slot }}</div>
+    <x-navigation.template :appName="$appName" :items="$items" :action="$action" />
+    <div class="flex-1">
+      <x-app-bar.top class="md:hidden">{{ $appName }}</x-app-bar.top>
+      <div>{{ $slot }}</div>
+    </div>
   </div>
 </x-root>
