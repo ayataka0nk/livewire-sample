@@ -10,8 +10,12 @@
     <x-text-field variant='outlined' class="bg-surface-container-lowest" label="Email" name="email" />
     <x-text-field variant='outlined' class="bg-surface-container-lowest" label="Email" icon='envelope'
       name="email" />
-    <x-text-field variant='outlined' class="bg-surface-container-lowest" label="Email" icon='envelope'
-      name="email" />
+    <x-text-field variant='outlined' class="bg-surface-container-lowest" label="Email" icon='envelope' name="email"
+      supportingText="Supporting Text" />
+    <x-text-field variant='outlined' class="bg-surface-container-lowest" label="Email" icon='envelope' name="email"
+      error="Error Text" />
     <x-text-field variant='outlined' class="bg-surface-container-lowest" label="Email" name="email" multiline />
+    <x-text-field variant='outlined' class="bg-surface-container-lowest" label="Email" name="email" icon='envelope'
+      multiline />
   </main>
 </x-app.storybook.layout>
