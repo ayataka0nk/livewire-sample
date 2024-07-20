@@ -29,11 +29,13 @@ const closeNavigationModal = () => {
 }
 
 
-const navigationCloseButton = document.querySelector('[data-action="navigation-close"]')
-navigationCloseButton.addEventListener('click', closeNavigationModal)
+document.querySelectorAll('[data-action="navigation-close"]').forEach((button) => {
+  button.addEventListener('click', closeNavigationModal)
+})
 
-const navigationOpenButton = document.querySelector('[data-action="navigation-open"]')
-navigationOpenButton.addEventListener('click', openNavigationModal)
+document.querySelectorAll('[data-action="navigation-open"]').forEach((button) => {
+  button.addEventListener('click', openNavigationModal)
+})
 
 const navigationModalScrim = getNavigationModalScrim()
 navigationModalScrim.addEventListener('click', closeNavigationModal)
