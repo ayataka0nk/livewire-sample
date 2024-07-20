@@ -3,13 +3,12 @@
     'icon' => null,
     'supportingText' => null,
     'error' => null,
-    'readonly' => false,
     'multiline' => false,
     'placeholder' => null,
 ])
 
 @php
-
+  $readonly = $attributes->get('readonly', false);
   $iconStyles = [
       'absolute',
       'left-4',
