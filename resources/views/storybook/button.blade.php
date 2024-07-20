@@ -1,5 +1,6 @@
 <x-app.storybook.layout>
   <main>
+    <button x-on:click="console.log('yep')">aaa</button>
     <x-button variant='filled' icon="academic-cap">Primary</x-button>
     <x-button variant='filled' color='secondary'>Secondary</x-button>
     <x-button variant='filled' color='tertiary'>Tertiary</x-button>
@@ -23,5 +24,13 @@
     <x-button variant='extended-fab' color='secondary'>Secondary</x-button>
     <x-button variant='extended-fab' color='tertiary'>Tertiary</x-button>
     <x-button variant='extended-fab' color='tertiary' icon='academic-cap'>Tertiary</x-button>
+    <div>
+      <x-icon-button variant='filled' icon='academic-cap' />
+      <x-icon-button variant='filled' icon='academic-cap' active />
+    </div>
+    <div>
+      <x-icon-button variant='standard' icon='academic-cap' />
+      <x-icon-button variant='standard' icon='academic-cap' active />
+    </div>
   </main>
 </x-app.storybook.layout>

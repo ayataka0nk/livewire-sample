@@ -1,6 +1,7 @@
 @props([
     'href' => null,
     'icon' => null,
+    'label' => null,
 ])
 
 @php
@@ -64,5 +65,5 @@
   @if ($icon !== null)
     <x-icon :name="$iconName" class="w-6 h-6 mr-3" />
   @endif
-  {{ $slot }}
+  {{ $label }}
 </x-dynamic-component>

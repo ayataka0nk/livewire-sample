@@ -11,6 +11,9 @@ Route::get('/sandbox', function () {
 });
 
 Route::group(['prefix' => 'storybook'], function () {
+    Route::get('/app-bar', function () {
+        return view('storybook.app-bar');
+    });
     Route::get('/button', function () {
         return view('storybook.button');
     });
