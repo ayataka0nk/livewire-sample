@@ -13,4 +13,8 @@ Route::group(['prefix' => 'storybook'], function () {
     Route::get('/button', function () {
         return view('storybook.button');
     });
+
+    Route::get('/text-field', function () {
+        return view('storybook.text-field');
+    });
 });

@@ -1,5 +1,8 @@
 <x-app.storybook.layout>
   <main>
+    <div class="relative hover:after:absolute hover:after:inset-0 hover:after:bg-black">
+      aaa
+    </div>
     <x-button variant='filled' icon="academic-cap">Primary</x-button>
     <x-button variant='filled' color='secondary'>Secondary</x-button>
     <x-button variant='filled' color='tertiary'>Tertiary</x-button>
