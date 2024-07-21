@@ -20,9 +20,9 @@ class Laboratory extends Component
 
     public function __construct()
     {
-        $this->definition = '';
-        $this->input = "default\nvalval";
-        $this->output = '';
+        $this->definition = "";
+        $this->input = "";
+        $this->output = "";
         $this->logs = collect();
     }
 

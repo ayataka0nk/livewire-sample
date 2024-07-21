@@ -3,9 +3,9 @@
     <x-app-bar.top class="md:hidden">AImyMe</x-app-bar.top>
     <div class="flex h-full">
       <!-- logs -->
-      <div class='w-[300px] px-2 overflow-y-auto scrollbar-thin'>
+      <div class='w-[300px] px-2 overflow-y-auto scrollbar-thin flex flex-col gap-2'>
         @foreach ($logs as $log)
-          <x-card wire:click="handleLogClick({{ $log->id }})">
+          <x-card class="shrink-0" wire:click="handleLogClick({{ $log->id }})">
             <div class="whitespace-pre-wrap line-clamp-3">{{ $log->definition }}</div>
           </x-card>
         @endforeach
