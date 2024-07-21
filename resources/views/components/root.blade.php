@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="ja">
 
 <head>
   <meta charset="utf-8">
@@ -14,11 +14,6 @@
 <body class="light">
   {{ $slot }}
   @livewireScripts
-  <script>
-    document.addEventListener('alpine:init', () => {
-      console.log('Alpine.js has been initialized');
-    })
-  </script>
 </body>
 
 </html>

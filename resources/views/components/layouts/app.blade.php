@@ -1,1 +1,3 @@
-{{ $slot }}
+<x-root>
+  {{ $slot }}
+</x-root>
