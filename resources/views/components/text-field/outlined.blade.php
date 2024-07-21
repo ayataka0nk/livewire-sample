@@ -106,7 +106,7 @@
 
 @endphp
 
-<div {{ $attributes->only('class')->class(['relative']) }} x-data="{
+<div {{ $attributes->only('class')->class(['bg-inherit']) }} x-data="{
     autoresize(event) {
         if (typeof event?.target === 'undefined') {
             return

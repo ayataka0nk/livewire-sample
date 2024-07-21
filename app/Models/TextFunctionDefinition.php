@@ -10,6 +10,8 @@ class TextFunctionDefinition extends Model
     use HasFactory;
 
     protected $fillable = [
-        'definition'
+        'name',
+        'definition',
+        'user_id'
     ];
 }

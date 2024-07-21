@@ -11,9 +11,14 @@
           'href' => route('dashboard'),
       ],
       [
-          'label' => 'Laboratory',
-          'icon' => 'wrench-screwdriver',
-          'href' => route('laboratory'),
+          'label' => 'Function',
+          'icon' => 'variable',
+          'href' => route('functions'),
+      ],
+      [
+          'label' => 'History',
+          'icon' => 'archive-box',
+          'href' => route('history'),
       ],
   ];
 

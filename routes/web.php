@@ -11,9 +11,9 @@ Route::post('/login', [\App\Http\Controllers\AuthController::class, 'login'])->n
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/dashboard', \App\Livewire\User\Dashboard::class)->name('dashboard');
-    Route::get('/laboratory', \App\Livewire\User\Laboratory::class)->name('laboratory');
+    Route::get('/history', \App\Livewire\User\History::class)->name('history');
+    Route::get('/functions', \App\Livewire\User\FunctionDefinitionView::class)->name('functions');
 });
-
 
 
 Route::group(['prefix' => 'storybook'], function () {
