@@ -10,6 +10,11 @@
           'icon' => 'home',
           'href' => route('dashboard'),
       ],
+      [
+          'label' => 'Laboratory',
+          'icon' => 'wrench-screwdriver',
+          'href' => route('laboratory'),
+      ],
   ];
 
 @endphp

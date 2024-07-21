@@ -121,10 +121,10 @@
   @endif
   <div @class($inputWrapperStyles)>
     @if ($multiline)
-      <textarea {{ $attributes->merge(['placeholder' => ''])->except('class') }} @class($inputStyles)
-        x-on:input="autoresize" x-init="autoresize({ target: $el })" rows="1">{{ $attributes->get('value') }}</textarea>
+      <textarea wire:key="{{ rand() }}" {{ $attributes->merge(['placeholder' => ''])->except('class') }}
+        @class($inputStyles) x-on:input="autoresize" x-init="autoresize({ target: $el })" rows="1">{{ $attributes->get('value') }}</textarea>
     @else
-      <input @class($inputStyles) placeholder='' :readonly="$readonly" {{ $attributes->except('class') }} />
+      <input @class($inputStyles) placeholder='' {{ $attributes->except('class') }} />
     @endif
 
     @if ($label)

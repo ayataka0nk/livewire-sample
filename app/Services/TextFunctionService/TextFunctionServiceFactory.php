@@ -4,11 +4,13 @@ namespace App\Services\TextFunctionService;
 
 class TextFunctionServiceFactory
 {
-    public function create(string $type = ''): TextFunctionService
+    public function create(string $type = 'velocity'): TextFunctionService
     {
         switch ($type) {
-            default:
+            case 'velocity':
                 return app()->make(VelocityService::class);
+            default:
+                throw new \InvalidArgumentException('Invalid type');
         }
     }
 }

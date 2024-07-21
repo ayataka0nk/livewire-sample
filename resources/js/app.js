@@ -39,3 +39,4 @@ document.querySelectorAll('[data-action="navigation-open"]').forEach((button) =>
 
 const navigationModalScrim = getNavigationModalScrim()
 navigationModalScrim?.addEventListener('click', closeNavigationModal)
+

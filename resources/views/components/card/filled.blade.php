@@ -1,6 +1,7 @@
 @php
 
   $onClick = $attributes->get('x-on:click');
+  $wireClick = $attributes->get('wire:click');
   $href = $attributes->get('href');
 
   if ($onClick) {
@@ -11,7 +12,7 @@
       $component = 'wrapper.div';
   }
 
-  if ($onClick || $href) {
+  if ($onClick || $href || $wireClick) {
       $hasAction = true;
   } else {
       $hasAction = false;
