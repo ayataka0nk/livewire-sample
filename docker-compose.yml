@@ -1,7 +1,9 @@
 services:
     web:
         build:
-            context: ./docker/php
+            context: ./
+            dockerfile: Dockerfile
+            target: development
             args:
                 WWWUSER: "${WWWUSER:-1000}"
                 WWWGROUP: "${WWWGROUP:-1000}"

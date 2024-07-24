@@ -13,10 +13,10 @@ RUN a2enmod headers
 RUN curl -sS https://getcomposer.org/installer | php
 RUN mv composer.phar /usr/local/bin/composer
 
-COPY /sites-available/000-default.conf /etc/apache2/sites-available/000-default.conf
-COPY /laravel-worker.conf /etc/supervisor/conf.d/laravel-worker.conf
+COPY ./sites-available/000-default.conf /etc/apache2/sites-available/000-default.conf
+COPY ./laravel-worker.conf /etc/supervisor/conf.d/laravel-worker.conf
 
-COPY entrypoint.sh /usr/local/bin/
+COPY ./entrypoint.sh /usr/local/bin/
 RUN chmod 777 /usr/local/bin/entrypoint.sh
 
 # 実行ユーザの作成
