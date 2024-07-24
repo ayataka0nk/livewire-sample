@@ -72,6 +72,7 @@ COPY . /var/www/html
 WORKDIR /var/www/html
 # Composerの依存関係をインストール
 RUN composer install --no-dev --optimize-autoloader
+RUN npm ci
 RUN npm run build
 # 権限を設定
 RUN chown -R www-data:www-data /var/www/html \
