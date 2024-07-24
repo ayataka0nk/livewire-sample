@@ -23,5 +23,5 @@ jobs:
           REPOSITORY: aimymestack-aimymerepository1b7b4e19-yf6grebmc8ya
           IMAGE_TAG: ${{ github.sha }}
         run: |
-          docker build -t $REGISTRY/$REPOSITORY:$IMAGE_TAG .
+          docker build --target production -t $REGISTRY/$REPOSITORY:$IMAGE_TAG .
           docker push $REGISTRY/$REPOSITORY:$IMAGE_TAG
