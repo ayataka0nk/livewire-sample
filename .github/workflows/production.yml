@@ -20,7 +20,7 @@ jobs:
       - name: Build, tag, and push image to Amazon ECR
         env:
           REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-          REPOSITORY: aimymestack-aimymerepository1b7b4e19-yf6grebmc8ya
+          REPOSITORY: aimyme
           IMAGE_TAG: ${{ github.sha }}
         run: |
           docker build --target production -t $REGISTRY/$REPOSITORY:$IMAGE_TAG .
